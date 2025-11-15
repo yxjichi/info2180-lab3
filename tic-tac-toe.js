@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const status = document.getElementById('status');
     const newGameBtn = document.querySelector('.btn');
 
-    const winningCombos = [
+    const winning = [
         [0,1,2], [3,4,5], [6,7,8],
         [0,3,6], [1,4,7], [2,5,8],
         [0,4,8], [2,4,6]
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function checkWinner() { //iterates through winning combinations n checks those squares for a match
-        for (let combo of winningCombos) {
+        for (let combo of winning) {
             const [a, b, c] = combo;
             const markA = squares[a].textContent;
             const markB = squares[b].textContent;
